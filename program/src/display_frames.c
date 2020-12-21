@@ -67,10 +67,52 @@ int		display_single_file(const char *pathname)
 	return (success);
 }
 
+void	ft_cpy_image(char *dst, const char *src)
+{
+	for (size_t i = 0; i < IMAGE_SIZE; i++)
+	{
+		dst[i] = src[i];
+	}
+}
+
+int		display_frame_test(const char *pathnames[])
+{
+	int		fd;
+	char	buffer[IMAGE_SIZE];
+	char	movie[FRAME_TOTAL][IMAGE_SIZE];
+	size_t	i;
+
+	i = 0;
+	while (pathnames[i] != NULL)
+	{
+		fd = open(pathnames[i], O_RDONLY);
+		if (fd == -1)
+			return (error);
+		if (read(fd, buffer, IMAGE_SIZE) == -1)
+			return (error);
+		ft_cpy_image(movie[i], buffer);
+		i++;
+	}
+	i = 0;
+	system("clear");
+	while (i < FRAME_TOTAL)
+	{
+		display_color(DARKGREEN);
+		// usleep(100000);
+		delete_frame();
+		usleep(1);
+		write(1, movie[i], IMAGE_SIZE);
+		i++;
+	}
+	clear_color();
+	return (success);
+}
+
 int		display_frames(const char *pathnames[])
 {
 	int		fd;
 	char	buffer[IMAGE_SIZE];
+	// char	movie[FRAME_TOTAL + 1][IMAGE_SIZE];
 	size_t	i;
 
 	i = 0;
