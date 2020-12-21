@@ -87,7 +87,10 @@ int		display_frame_test(const char *pathnames[])
 	{
 		fd = open(pathnames[i], O_RDONLY);
 		if (fd == -1)
+		{
+			perror("open");
 			return (error);
+		}
 		if (read(fd, buffer, IMAGE_SIZE) == -1)
 			return (error);
 		ft_cpy_image(movie[i], buffer);
@@ -98,9 +101,9 @@ int		display_frame_test(const char *pathnames[])
 	while (i < FRAME_TOTAL)
 	{
 		display_color(DARKGREEN);
-		usleep(100000);
+		usleep(250000);
 		delete_frame();
-		usleep(10000);
+		// usleep(10000);
 		write(1, movie[i], IMAGE_SIZE);
 		i++;
 	}
