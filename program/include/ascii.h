@@ -6,7 +6,7 @@
 /*   By: mraasvel <mraasvel@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/21 17:10:01 by mraasvel      #+#    #+#                 */
-/*   Updated: 2020/12/21 17:10:30 by mraasvel      ########   odam.nl         */
+/*   Updated: 2020/12/21 19:34:55 by mraasvel      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <stddef.h>
 
 # define ART_DIR "../art"
-# define IMAGE_SIZE 1944
-# define HEIGHT 24
+# define IMAGE_SIZE 9648
+# define HEIGHT 48
 
 # define DARKRED "\033[0;31m"
 # define DARKGREEN "\033[0;32m"
@@ -41,5 +41,6 @@ typedef enum	e_errnums
 */
 
 int	display_frames(const char *pathnames[]);
+int	display_single_file(const char *pathname);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mraasvel <mraasvel@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/21 16:53:44 by mraasvel      #+#    #+#                 */
-/*   Updated: 2020/12/21 17:09:59 by mraasvel      ########   odam.nl         */
+/*   Updated: 2020/12/21 19:35:13 by mraasvel      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ const char *files[] = {
 
 int	main(void)
 {
-	display_frames(files);
+	// display_frames(files);
+	display_single_file("../art/total_art.txt");
 	return (0);
 }
