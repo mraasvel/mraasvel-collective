@@ -100,7 +100,7 @@ int		display_frame_test(const char *pathnames[])
 		display_color(DARKGREEN);
 		// usleep(100000);
 		delete_frame();
-		usleep(1);
+		usleep(10000);
 		write(1, movie[i], IMAGE_SIZE);
 		i++;
 	}
