@@ -6,7 +6,7 @@
 /*   By: mraasvel <mraasvel@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/21 16:53:44 by mraasvel      #+#    #+#                 */
-/*   Updated: 2020/12/22 00:26:29 by mraasvel      ########   odam.nl         */
+/*   Updated: 2020/12/22 00:27:25 by mraasvel      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -319,7 +319,7 @@ const char *files[] = {
 
 int	main(void)
 {
-	// display_frames_fast(files);
-	print_ending();
+	display_frames_fast(files);
+	// print_ending();
 	return (0);
 }
