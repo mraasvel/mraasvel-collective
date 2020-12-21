@@ -75,7 +75,7 @@ void	ft_cpy_image(char *dst, const char *src)
 	}
 }
 
-int		display_frame_test(const char *pathnames[])
+int		display_frame_fast(const char *pathnames[])
 {
 	int		fd;
 	char	buffer[IMAGE_SIZE];
@@ -111,7 +111,7 @@ int		display_frame_test(const char *pathnames[])
 	return (success);
 }
 
-int		display_frames(const char *pathnames[])
+int		display_frame_slow(const char *pathnames[])
 {
 	int		fd;
 	char	buffer[IMAGE_SIZE];
