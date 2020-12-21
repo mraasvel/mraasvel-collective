@@ -67,18 +67,9 @@ int		display_single_file(const char *pathname)
 	return (success);
 }
 
-void	ft_cpy_image(char *dst, const char *src)
-{
-	for (size_t i = 0; i < IMAGE_SIZE; i++)
-	{
-		dst[i] = src[i];
-	}
-}
-
-int		display_frame_fast(const char *pathnames[])
+int		display_frames_fast(const char *pathnames[])
 {
 	int		fd;
-	char	buffer[IMAGE_SIZE];
 	char	movie[FRAME_TOTAL][IMAGE_SIZE];
 	size_t	i;
 
@@ -91,9 +82,8 @@ int		display_frame_fast(const char *pathnames[])
 			perror("open");
 			return (error);
 		}
-		if (read(fd, buffer, IMAGE_SIZE) == -1)
+		if (read(fd, movie[i], IMAGE_SIZE) == -1)
 			return (error);
-		ft_cpy_image(movie[i], buffer);
 		i++;
 	}
 	i = 0;
@@ -111,11 +101,10 @@ int		display_frame_fast(const char *pathnames[])
 	return (success);
 }
 
-int		display_frame_slow(const char *pathnames[])
+int		display_frames_slow(const char *pathnames[])
 {
 	int		fd;
 	char	buffer[IMAGE_SIZE];
-	// char	movie[FRAME_TOTAL + 1][IMAGE_SIZE];
 	size_t	i;
 
 	i = 0;
