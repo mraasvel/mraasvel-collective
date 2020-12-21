@@ -6,7 +6,7 @@
 #    By: mraasvel <mraasvel@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/12/21 16:53:20 by mraasvel      #+#    #+#                  #
-#    Updated: 2020/12/21 19:25:19 by mraasvel      ########   odam.nl          #
+#    Updated: 2020/12/21 19:28:44 by mraasvel      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ IDIR = include
 # COMPILATION
 
 CC = gcc
-# CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 DFLAGS = -O0 -g -fsanitize=address
 IFLAGS = -I $(IDIR)
 

@@ -1,1 +1,1 @@
-make && time ./ascii
+make && time ./ascii.out

@@ -48,6 +48,9 @@ int		display_single_file(const char *pathname)
 	int		ret;
 
 	system("clear");
+	fd = open(pathname, O_RDONLY);
+	if (fd == -1)
+		return (error);
 	ret = 1;
 	while (ret > 0)
 	{
