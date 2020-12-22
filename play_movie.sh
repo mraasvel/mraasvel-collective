@@ -22,7 +22,7 @@ do
 	sleep 0.4
 done
 
-
+# shortfilm
 for i in $(seq 1 $END1)
 do
 	clear
@@ -44,6 +44,24 @@ for i in $(seq $START3 $LAST_FRAME)
 do
 	clear
 	cat ./art/ascii-art-$i.txt
-	sleep 0.25
+	sleep 0.2
 done
+
+
+#outro
+sleep 2
+for i in $(seq 403 404)
+do
+	clear
+	cat ./outro/ascii-art-$i.txt
+	sleep 0.5
+done
+
+for i in $(seq 405 407)
+do
+	clear
+	cat ./outro/ascii-art-$i.txt
+	sleep 1.2
+done
+	sleep 5
 echo -en '\033[0;0m'
