@@ -8,19 +8,19 @@ LAST_FRAME=301
 
 echo -en '\033[0;32m'
 # intro
-# for i in {302..307}
-# do
-# 	clear
-# 	cat ./intro/ascii-art-$i.txt
-# 	sleep 0.4
-# done
+for i in {302..307}
+do
+	clear
+	cat ./intro/ascii-art-$i.txt
+	sleep 0.4
+done
 
-# for i in {307..323}
-# do
-# 	clear
-# 	cat ./intro/ascii-art-$i.txt
-# 	sleep 0.4
-# done
+for i in {307..323}
+do
+	clear
+	cat ./intro/ascii-art-$i.txt
+	sleep 0.4
+done
 
 
 for i in $(seq 1 $END1)
